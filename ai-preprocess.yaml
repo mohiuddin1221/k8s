@@ -1,0 +1,23 @@
+# Kubernetes deployment for ai-preprocess
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ai-preprocess
+  namespace: mohiuddin
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: ai-preprocess
+  template:
+    metadata:
+      labels:
+        app: ai-preprocess
+    spec:
+      containers:
+      - name: ai-preprocess
+        image: WhiteshopAcr.azurecr.io/ai-preprocess:latest
+        imagePullPolicy: Always
+        
+      imagePullSecrets:
+      - name: acr-auth
