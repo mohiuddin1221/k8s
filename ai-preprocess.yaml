@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: ai-preprocess
-        image: WhiteshopAcr.azurecr.io/ai-preprocess:latest
+        image: WhiteshopAcr.azurecr.io/ai-preprocess:cf7b36e323fbe220e37af674ce269956a20f47bd
         imagePullPolicy: Always
         
       imagePullSecrets:
