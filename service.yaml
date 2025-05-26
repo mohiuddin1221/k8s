@@ -1,0 +1,14 @@
+#kubernetes service for the k8s cluster
+apiVersion: v1
+kind: Service
+metadata:
+  name: ai-preprocess-service
+  namespace: mohiuddin
+  spec:
+    selector:
+      app: ai-preprocess
+    ports:
+      - protocol: TCP
+        port: 80
+        targetPort: 5000
+    type: LoadBalancer
