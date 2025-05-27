@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: hq-api
-        image: RedsopAcr.azurecr.io/image:cf7b36e323fbe220e37af674ce269956a20f47bd
+        image: RedsopAcr.azurecr.io/image:10026dac8c1a775309c069a57ecb5ca2486eae33
         imagePullPolicy: Always
         
       imagePullSecrets:
