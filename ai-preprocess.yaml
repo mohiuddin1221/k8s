@@ -2,21 +2,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ai-preprocess
+  name: hq-api
   namespace: mohiuddin
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: ai-preprocess
+      app: hq-api
   template:
     metadata:
       labels:
-        app: ai-preprocess
+        app: hq-api
     spec:
       containers:
-      - name: ai-preprocess
-        image: WhiteshopAcr.azurecr.io/ai-preprocess:cf7b36e323fbe220e37af674ce269956a20f47bd
+      - name: hq-api
+        image: RedsopAcr.azurecr.io/image:cf7b36e323fbe220e37af674ce269956a20f47bd
         imagePullPolicy: Always
         
       imagePullSecrets:
