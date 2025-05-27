@@ -1,14 +1,14 @@
-#kubernetes service for the k8s cluster
+# Kubernetes service for the k8s cluster
 apiVersion: v1
 kind: Service
 metadata:
   name: hq-api-service
   namespace: mohiuddin
-  spec:
-    selector:
-      app: hq-api
-    ports:
-      - protocol: TCP
-        port: 8000
-        targetPort: 8000
-    type: LoadBalancer
+spec:
+  selector:
+    app: hq-api
+  ports:
+    - protocol: TCP
+      port: 8000
+      targetPort: 8000
+  type: LoadBalancer
