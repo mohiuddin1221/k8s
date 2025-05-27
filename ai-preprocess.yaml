@@ -1,4 +1,3 @@
-# Kubernetes deployment for ai-preprocess
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -16,7 +15,7 @@ spec:
     spec:
       containers:
       - name: hq-api
-        image: RedsopAcr.azurecr.io/image:09c36219ecf4d96b35e3c40de33d18312d08df84
+        image: RedsopAcr.azurecr.io/image:cf7b36e323fbe220e37af674ce269956a20f47bd
         imagePullPolicy: Always
         
       imagePullSecrets:
